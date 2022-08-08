@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+
+int givenvalue, value;
+int primesum=0;
+cout << "Display prime numbers up to? " << endl;
+cin >> givenvalue;
+
+for(value=2; value<=givenvalue; value++){
+
+ bool isprime= true;
+ for(int trialfactor=2; isprime && trialfactor<value; trialfactor++)
+        isprime=(value % trialfactor!=0);
+ if(isprime){
+
+  cout << value << endl;
+  primesum = primesum + value;
+
+
+ }
+
+
+}
+cout << "The sum of the prime numbers is " <<primesum<< endl;
+
+}
